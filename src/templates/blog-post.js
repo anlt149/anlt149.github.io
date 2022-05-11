@@ -17,10 +17,10 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
 
-      <p className="my-8">
+      <div className="my-8">
         <span className="text-gray-400"> «</span>
         <a href="/" className="hover:underline" > All notes</a>
-      </p>
+      </div>
 
       <article itemScope itemType="http://schema.org/Article">
         <header className="mb-8">
