@@ -235,7 +235,10 @@ a {
   color: var(--color-primary);
 }
 
-a:hover,
+a:hover {
+  text-decoration: underline
+}
+
 a:focus {
   text-decoration: none;
 }

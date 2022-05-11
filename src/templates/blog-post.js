@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  const siteTitle = data.site.siteMetadata?.title;
   const { previous, next } = data
 
   return (
@@ -16,12 +16,17 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+
+      <p className="my-8">
+        <span className="text-gray-400"> «</span>
+        <a href="/" className="hover:underline" > All notes</a>
+      </p>
+
+      <article itemScope itemType="http://schema.org/Article">
         <header className="mb-8">
-          <h1 itemProp="headline" className="text-3xl">{post.frontmatter.date} - {post.frontmatter.title}</h1>
+          <h1 itemProp="headline" className="text-3xl">
+            {post.frontmatter.date} - {post.frontmatter.title}
+          </h1>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
