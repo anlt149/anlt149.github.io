@@ -7,9 +7,7 @@ const BlogIndex = ({ data, location }) => {
   const [activeTag, setActiveTag] = React.useState(null)
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const routes = data.site.siteMetadata?.routes
   const tags = data.page.tags
-  const hoverLinkStyle = "hover:text-black hover:underline"
 
   const toggleActive = tagName => {
     setActiveTag(tagName)
@@ -37,9 +35,8 @@ const BlogIndex = ({ data, location }) => {
                 <Link
                   to={`#${tag.name}`}
                   itemProp="url"
-                  className={`${hoverLinkStyle} pt-1 ${
-                    activeTag === tag.name && "targetClass"
-                  }`}
+                  className={`pt-1 ${activeTag === tag.name && "targetClass"
+                    }`}
                   onClick={() => toggleActive(tag.name)}
                 >
                   {tag.name}
@@ -57,7 +54,7 @@ const BlogIndex = ({ data, location }) => {
                         <Link
                           to={post.fields.slug}
                           itemProp="url"
-                          className={`${hoverLinkStyle} font-medium`}
+                          className={`font-medium`}
                         >
                           {post.detail.title}
                         </Link>

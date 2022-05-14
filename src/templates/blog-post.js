@@ -9,7 +9,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title;
   const { previous, next } = data
-
+  console.log(post.html);
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -19,7 +19,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
       <div className="my-8">
         <span className="text-gray-400"> «</span>
-        <a href="/" className="hover:underline" > All notes</a>
+        <a href="/" > All notes</a>
       </div>
 
       <article itemScope itemType="http://schema.org/Article">

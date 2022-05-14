@@ -93,6 +93,11 @@ hr {
   border: 0;
 }
 
+/* text */
+p {
+  margin-bottom: var(--spacing-4) !important;
+}
+
 /* Heading */
 
 h1,
@@ -102,8 +107,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  margin-top: var(--spacing-12);
-  margin-bottom: var(--spacing-2) !important;
+  margin-top: var(--spacing-8) !important;
+  margin-bottom: var(--spacing-4) !important;
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
 }
@@ -236,11 +241,12 @@ a {
 }
 
 a:hover {
-  text-decoration: underline
+  text-decoration: none;
+  border-bottom: 0.25em solid #bdffec;
 }
 
-a:focus {
-  text-decoration: none;
+span > a {
+  margin-bottom: 2rem;
 }
 
 /* Custom classes */
@@ -321,7 +327,7 @@ a:focus {
 }
 
 .gatsby-highlight {
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-4);
 }
 
 /* Media queries */
