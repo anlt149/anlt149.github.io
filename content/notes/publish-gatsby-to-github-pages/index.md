@@ -5,7 +5,7 @@ description: "Publish gatsby web application to github pages."
 tags: ["gatsby"]
 ---
 
-## 1. [Install [gh-pages]](#setup)
+## 1. Install gh-pages
 
 ```shell
 npm i gh-pages
@@ -13,7 +13,7 @@ npm i gh-pages
 
 I used **[gh-pages](https://www.npmjs.com/package/gh-pages)** to deploy my repository to github pages.
 
-## 2. [Setup Github repository](#set-up-repository)
+## 2. Setup Github repository
 
 I created a repository on Github and initialized it locally. Then I checked out into 2 branches: `master` and `dev` (or whaterver).
 
@@ -24,7 +24,7 @@ The branch **`dev`** should be used to store development source code.
 My repository's branches will look like:
 ![branches](./branches.png)
 
-## 3. [Configure gatsby](#set-up-config)
+## 3. Configure gatsby
 
 In `package.json` I added this following scripts.
 
