@@ -7,7 +7,7 @@ module.exports = {
       summary: `who lives and works in Sai Gon building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://github.com/anlt149/anlt149.github.io`,
     social: {
       twitter: `okayanoi`,
     },

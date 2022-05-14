@@ -7,6 +7,8 @@ const BlogIndex = ({ data, location }) => {
   const [activeTag, setActiveTag] = React.useState(null)
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
+
+  const githubUrl = data.site.siteMetadata?.siteTitle;
   const tags = data.page.tags
 
   const toggleActive = tagName => {
@@ -15,6 +17,10 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <header>
+        <div className="text-3xl font-extrabold font-serif mb-0">everyday: Development Log</div>
+        <a href={githubUrl} className="text-sm cursor-pointer">Github Repository</a>
+      </header>
       <Seo title="" />
       {/* <ul>
         {routes.map(r => {
@@ -78,10 +84,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        routes {
-          href
-          text
-        }
+        siteUrl
       }
     }
     page: allMarkdownRemark {
