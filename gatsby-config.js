@@ -6,7 +6,7 @@ module.exports = {
       name: `An Le`,
       summary: `who lives and works in Sai Gon building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Logging everything I've learnt.`,
     siteUrl: `https://github.com/anlt149/anlt149.github.io`,
     social: {
       twitter: `okayanoi`,
