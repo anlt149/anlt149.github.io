@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 11 May 2022 09:56:02 GMT</lastBuildDate><item><title><![CDATA[Transaction Isolation]]></title><description><![CDATA[1. Dirty read Dirty Reads occur when one transaction reads data written by another, uncommitted, transaction. The danger with dirty reads is…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/2022-05-10-Transaction/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/2022-05-10-Transaction/</guid><pubDate>Tue, 10 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;1. Dirty read&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 14 May 2022 04:56:44 GMT</lastBuildDate><item><title><![CDATA[How I published my gatsby app to github pages]]></title><description><![CDATA[1. Install [gh-pages] I used gh-pages to deploy my repository to github pages. 2. Setup Github repository I created a repository on Github…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/publish-gatsby-to-github-pages/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/publish-gatsby-to-github-pages/</guid><pubDate>Fri, 13 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;1. &lt;a href=&quot;#setup&quot;&gt;Install [gh-pages]&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i gh-pages&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I used &lt;strong&gt;&lt;a href=&quot;https://www.npmjs.com/package/gh-pages&quot;&gt;gh-pages&lt;/a&gt;&lt;/strong&gt; to deploy my repository to github pages.&lt;/p&gt;
+&lt;h2&gt;2. &lt;a href=&quot;#set-up-repository&quot;&gt;Setup Github repository&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I created a repository on Github and initialized it locally. Then I checked out into 2 branches: &lt;code class=&quot;language-text&quot;&gt;master&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;dev&lt;/code&gt; (or whaterver).&lt;/p&gt;
+&lt;p&gt;The branch &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;master&lt;/code&gt;&lt;/strong&gt; should be set to default and only contains the built source only because &lt;strong&gt;Github Pages&lt;/strong&gt; will get the default brach to publish.&lt;/p&gt;
+&lt;p&gt;The branch &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;dev&lt;/code&gt;&lt;/strong&gt; should be used to store development source code.&lt;/p&gt;
+&lt;p&gt;My repository’s branches will look like:
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a6b6c116eb61fbbc0ad3e22cc2ff594d/dba9a/branches.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 86.0759493670886%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAACeUlEQVQ4y32U2W7TQBSG/ShtQhI7Xsf7Fm/ZHLdNmpJWLRWIQuEGCYkbXv9H5zhOUmi5+HTGo5n/rGNJMXyEeY0or9l26yBbwktmeKdYOB/q6I0MpltrdgwR5DC9CawgZ8ZWCIk213dP2D484/HrT3z58Rsfv//C+u4z6s0DRrqLs4HGQi0a+rIJP1vg5vEbLnafsLl/wvbDM5x4CokuOFEF08vYox0WbDvvnVBfsViIUSyoIoTuJAxFS1Y2PEiUEolMZpeIy6ZNuVjxOi5XyBcb+JP5/lL6QoRQRQSD0vZzDFUb0mAs4EQFynrLl7P5FarVlr+L5TXml7dIqgaaiPZi8Z7k8G35GYSfcZbSUHNhplcYhw3GwYpRgprhtV9DDRsYydWb6OkaZtLAjStIskihhjVUK4DuTjAWEachggKanXCahjthO1AdbtDZUMfZoEPD+chi0RGl3EWok7e0Yw0zXbOl7+N6fXLmhMkGVtLwBEgD1YbhphBhwTWg4lJ3aY8swc1wW4y3cBL0ZBPSUHW4uNQEasDsYscdp7Sp2Pnymsfq2JRjMzQ7OnSbRHsj8xghQePjJVOeQe3F5X+h805csTPKrhU02rEhATeZIikbLDf3iIqaIzydt45ujwTi6gLJ9BJeOuf9fptyGyEdonqdXjwOcvoXr0d8SLnzWq1uEGSLNjoSFmFbJ7JM1PLCaXJ4RfRED4KEuj/ML8GdwAznMPwSZjhjjGDK/K8U3GV+k1Z4EKW15mYQ5R1E8R52eQtneg+73EGUu1cbRinTr1CizpAIzWDXcX3vQDV9jDQbvaGGwdiCrDlQDBey7qEvW0cUi/+b9Gr+ANW/K3DzUqa1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;branches&quot;
+        title=&quot;branches&quot;
+        src=&quot;/static/a6b6c116eb61fbbc0ad3e22cc2ff594d/f058b/branches.png&quot;
+        srcset=&quot;/static/a6b6c116eb61fbbc0ad3e22cc2ff594d/c26ae/branches.png 158w,
+/static/a6b6c116eb61fbbc0ad3e22cc2ff594d/6bdcf/branches.png 315w,
+/static/a6b6c116eb61fbbc0ad3e22cc2ff594d/f058b/branches.png 630w,
+/static/a6b6c116eb61fbbc0ad3e22cc2ff594d/dba9a/branches.png 652w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;3. &lt;a href=&quot;#set-up-config&quot;&gt;Configure gatsby&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; I added this following scripts.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;./package.json
+    &lt;span class=&quot;token comment&quot;&gt;//...&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;//...&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;&quot;deploy&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby build --prefix-paths &amp;amp;&amp;amp; gh-pages -d public -b master&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It will build my source code to &lt;em&gt;public&lt;/em&gt; directory and &lt;code class=&quot;language-text&quot;&gt;gh-pages&lt;/code&gt; will push those files to &lt;code class=&quot;language-text&quot;&gt;master&lt;/code&gt;. Then I config &lt;code class=&quot;language-text&quot;&gt;gastby-config.js&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// in gatsby-config.js&lt;/span&gt;
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;pathPrefix&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I was struggle with the pathPrefix for a while. I changed it from &lt;code class=&quot;language-text&quot;&gt;&apos;/blogs/&apos;&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;&apos;/&apos;&lt;/code&gt; and it worked.&lt;/p&gt;
+&lt;p&gt;Add the following strings in plugins array in &lt;code class=&quot;language-text&quot;&gt;gastby-config.js&lt;/code&gt; to support offline functionality (PWA).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// in gatsby-config.js&lt;/span&gt;
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-plugin-offline&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;4. &lt;a href=&quot;#deploy&quot;&gt;Deploy the blog&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run deploy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Gatsby blog could be hosted on GitHub Pages at &lt;strong&gt;https://&lt;code class=&quot;language-text&quot;&gt;&amp;lt;username&gt;&lt;/code&gt;.github.io/.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;My github page: &lt;a href=&quot;https://anlt149.github.io/&quot;&gt;anlt149.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;My repository: &lt;a href=&quot;https://github.com/anlt149/anlt149.github.io&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Transaction Isolation]]></title><description><![CDATA[1. Dirty read Dirty Reads occur when one transaction reads data written by another, uncommitted, transaction. The danger with dirty reads is…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/2022-05-10-Transaction/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/2022-05-10-Transaction/</guid><pubDate>Tue, 10 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;1. Dirty read&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Dirty Reads occur when one transaction reads data written by another, uncommitted, transaction. The danger with dirty reads is that the other transaction might never commit, leaving the original transaction with “dirty” data.&lt;/li&gt;
 &lt;/ul&gt;
@@ -11,222 +78,4 @@
 &lt;li&gt;Phantom read occurs when, in the course of a transaction, new rows are added or removed by another transaction to the records being read.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Resource&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.postgresql.org/docs/current/transaction-iso.html&quot;&gt;https://www.postgresql.org/docs/current/transaction-iso.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/hello-world/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
-&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
-&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
-eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-charcoal paste. The eggs may also be sold with the salted paste removed,
-wrapped in plastic, and vacuum packed. From the salt curing process, the
-salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dWC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACERJC/9oACAEBAAEFAkqW7B5Zovtvk//EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAESL/2gAIAQIBAT8BjT//xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAaEAADAQEBAQAAAAAAAAAAAAAAAREhQYGx/9oACAEBAAE/IXOrA43oOyg9wgU86OZMfwZKypT/2gAMAwEAAgADAAAAEMj/AP/EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQMBAT8QEcMrrL//xAAXEQEBAQEAAAAAAAAAAAAAAAABACFR/9oACAECAQE/EDqFaX//xAAeEAEAAgIBBQAAAAAAAAAAAAABABExYYEhQVHR4f/aAAgBAQABPxBKrg2GDiClXbHqF7iR1GlVWpSDwtYblyIMVw9TMCCKvPyp/9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Chinese Salty Egg&quot;
-        title=&quot;Chinese Salty Egg&quot;
-        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg&quot;
-        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/ff44c/salty_egg.jpg 158w,
-/static/8058f3f26913fea3b6a89a73344fe94a/a6688/salty_egg.jpg 315w,
-/static/8058f3f26913fea3b6a89a73344fe94a/828fb/salty_egg.jpg 630w,
-/static/8058f3f26913fea3b6a89a73344fe94a/0ede0/salty_egg.jpg 945w,
-/static/8058f3f26913fea3b6a89a73344fe94a/3ac88/salty_egg.jpg 1260w,
-/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
-        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;You can also write code blocks here!&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; saltyDuckEgg &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;chinese preserved food product&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;left&quot;&gt;Number&lt;/th&gt;
-&lt;th align=&quot;left&quot;&gt;Title&lt;/th&gt;
-&lt;th align=&quot;right&quot;&gt;Year&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;1&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Philosopher’s Stone&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2001&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;2&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Chamber of Secrets&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2002&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;3&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;Harry Potter and the Prisoner of Azkaban&lt;/td&gt;
-&lt;td align=&quot;right&quot;&gt;2004&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;a href=&quot;https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md&quot;&gt;View raw (TEST.md)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This is a paragraph.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is a paragraph.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Header 1
-========
-
-Header 2
---------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1 #
-## Header 2 ##
-### Header 3 ###
-#### Header 4 ####
-##### Header 5 #####
-###### Header 6 ######&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;h2&gt;This is a header.&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;This is the first list item.&lt;/li&gt;
-&lt;li&gt;This is the second list item.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Here’s some example code:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&gt; ## This is a header.
-&gt; 1. This is the first list item.
-&gt; 2. This is the second list item.
-&gt;
-&gt; Here&apos;s some example code:
-&gt;
-&gt;     Markdown.generate();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Red&lt;/li&gt;
-&lt;li&gt;Green&lt;/li&gt;
-&lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue
-
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;*&lt;/span&gt; Blue
-
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Red
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Green
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; Blue&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Buy flour and salt&lt;/li&gt;
-&lt;li&gt;Mix together with water&lt;/li&gt;
-&lt;li&gt;Bake&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Buy flour and salt
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Mix together with water
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; Bake&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;code goes&lt;/code&gt; here in this line&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;bold&lt;/strong&gt; goes here&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`code goes`&lt;/span&gt; here in this line
-&lt;span class=&quot;token list punctuation&quot;&gt;1.&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt; goes here&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Paragraph:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;!-- --&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Paragraph:
-
-    Code&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* * *
-
-***
-
-*****
-
-- - -
-
----------------------------------------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Example&quot;&gt;an example&lt;/a&gt; link.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.com&quot;&gt;This link&lt;/a&gt; has no title attr.&lt;/p&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Optional Title&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is [an example](http://example.com &quot;Example&quot;) link.
-
-[This link](http://example.com) has no title attr.
-
-This is [an example] [id] reference-style link.
-
-[id]: http://example.com &quot;Optional Title&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;*single asterisks*
-
-_single underscores_
-
-**double asterisks**
-
-__double underscores__&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This paragraph has some &lt;code class=&quot;language-text&quot;&gt;code&lt;/code&gt; in it.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This paragraph has some `code` in it.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://placehold.it/200x50&quot; alt=&quot;Alt Text&quot; title=&quot;Image Title&quot;&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;![Alt Text](https://placehold.it/200x50 &quot;Image Title&quot;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;&lt;a href=&quot;https://www.postgresql.org/docs/current/transaction-iso.html&quot;&gt;https://www.postgresql.org/docs/current/transaction-iso.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
