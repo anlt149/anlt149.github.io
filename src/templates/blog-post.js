@@ -1,15 +1,14 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title;
-  const { previous, next } = data
-  console.log(post.html);
+  const posts = data.allMarkdownRemark?.edges;
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -17,7 +16,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
 
-      <div className="my-8">
+      <div className="mb-8">
         <span className="text-gray-400"> «</span>
         <a href="/" > All notes</a>
       </div>
@@ -33,34 +32,21 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
+        {/* <footer>
           <Bio />
-        </footer>
+        </footer> */}
       </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+      <hr />
+      <nav className="px-4 mt-8">
+        <h2 className="mb-3">Read more</h2>
+        <ul >
+          {posts.map(p => (
+            <li key={p.node.id} className="list-disc text-sm">
+              <Link to={p.node.fields.slug}>
+                {p.node.frontmatter.date} - {p.node.frontmatter.title}
               </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
+            </li>
+          ))}
         </ul>
       </nav>
     </Layout>
@@ -72,8 +58,6 @@ export default BlogPostTemplate
 export const pageQuery = graphql`
   query BlogPostBySlug(
     $id: String!
-    $previousPostId: String
-    $nextPostId: String
   ) {
     site {
       siteMetadata {
@@ -90,20 +74,19 @@ export const pageQuery = graphql`
         description
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
+    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit: 5) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "YYYY.MM.DD")
+            tags
+          }
+          fields {
+            slug
+          }
+        }
       }
     }
   }
