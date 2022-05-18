@@ -1,5 +1,5 @@
 ---
-title: Svelte triggers function call every a variable changes
+title: Svelte triggers function call everytime a variable changes
 date: "2022-05-14"
 description: "Publish gatsby web application to github pages."
 tags: ["svelte"]
