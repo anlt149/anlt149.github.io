@@ -16,6 +16,33 @@ const BlogIndex = ({ data, location }) => {
   const tags = data.page.tags
   const dataRecentPosts = data.recentPosts.edges;
 
+  let tagList = [];
+
+  // DISPLAY LIST BY CATEGORY AND SORT BY DATE (DESC)
+  // GASTBY have not supported sort in group by yet.
+  // So I have to sort it manually
+  for (let i = 0; i < tags.length; i++) {
+    // Sort sublist
+    let edges = tags[i].edges.sort((a, b) => {
+      // Sort date (desc)
+      return b.node.frontmatter.date.localeCompare(a.node.frontmatter.date.localeCompare);
+    });
+
+    // Create new list
+    tagList = [...tagList, {
+      "name": tags[i].name,
+      "edges": edges,
+      "count": tags[i].postCount
+    }]
+  }
+
+  // Sort final list
+  tagList.sort((a, b) => {
+    return b.edges[0].node.frontmatter.date.localeCompare(a.edges[0].node.frontmatter.date);
+  })
+
+  console.log(tagList);
+
   const header = (link, name) => {
     return (
       <div className="text-2xl font-semibold font-serif mt-8 mb-4">
@@ -67,7 +94,7 @@ const BlogIndex = ({ data, location }) => {
       {header(LINK_BY_CATEGORIES, "By Categories")}
       {/* Tags */}
       <ul>
-        {tags.map(tag => {
+        {tagList.map(tag => {
           return (
             <li key={tag.name}>
               <div
@@ -82,7 +109,7 @@ const BlogIndex = ({ data, location }) => {
                   onClick={() => toggleActive(tag.name)}
                 >
                   {tag.name}
-                  <span> ({tag.postCount})</span>
+                  <span> ({tag.count})</span>
                 </Link>
               </div>
 

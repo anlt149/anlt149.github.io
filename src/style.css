@@ -23,6 +23,7 @@
   --spacing-8: 2rem;
   --spacing-10: 2.5rem;
   --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
@@ -84,6 +85,8 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  height: 100% !important;
+  min-height: 100% !important;
 }
 
 footer {
@@ -252,20 +255,21 @@ span > a {
 .link-list  {
   margin: 0 !important;
 }
-.global-header {
-  margin: 0 auto;
-  width: var(--maxWidth-wrapper);
-  padding: 0 var(--spacing-5);
+
+.site-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-.global-wrapper {
-  margin: var(--spacing-10) auto;
+.main {
+  flex-grow: 1;
+}
+
+.section-wrapper {
+  margin: var(--spacing-14) auto;
   max-width: var(--maxWidth-wrapper) !important;
   padding: var(--spacing-0) var(--spacing-5 );
-}
-
-.global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-20);
 }
 
 .post-list-item {

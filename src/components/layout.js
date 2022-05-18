@@ -6,25 +6,24 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
 
   return (
-    <div data-is-root-path={isRootPath} className="flex flex-col">
-      <div className="flex-none self-center center-horizontal bg-stone-100 w-full h-16 font-serif">
-        <div className="global-header" >
+    <div data-is-root-path={isRootPath} className="site-wrapper">
+      {/* Header */}
+      <div className="center-horizontal bg-stone-100 w-full h-16 font-serif">
+        <div className="section-wrapper w-full" >
           <Link className="text-lg font-bold" to="/">
             {title}
             <span className="text-stone-500 animation-blink">▮</span>
           </Link>
         </div>
-
-
       </div>
 
-      <div className="flex-none global-wrapper w-full">{children}</div>
+      {/* Children */}
+      <main className="main flex-1 section-wrapper w-full">{children}</main>
 
-      <div className="flex-1" />
-
+      {/* Footer */}
       <footer className="flex-none flex flex-row justify-center items-center h-16 bg-stone-100 text-stone-500 text-sm font-serif">
         {/* Social */}
-        <div className="flex-1 center-horizontal w-full global-wrapper">
+        <div className="flex-1 center-horizontal w-full section-wrapper">
           <div >
             © {new Date().getFullYear()}
             {` `} An Le

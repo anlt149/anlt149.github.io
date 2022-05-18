@@ -10,7 +10,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const posts = data.allMarkdownRemark?.edges;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} className="min-h-[100vh]">
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
