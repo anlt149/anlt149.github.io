@@ -90,11 +90,6 @@ footer {
   padding: var(--spacing-1) var(--spacing-1);
 }
 
-.wrapper {
-  margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
-}
-
 hr {
   background: var(--color-accent);
   height: 1px;
@@ -257,11 +252,16 @@ span > a {
 .link-list  {
   margin: 0 !important;
 }
+.global-header {
+  margin: 0 auto;
+  width: var(--maxWidth-wrapper);
+  padding: 0 var(--spacing-5);
+}
 
 .global-wrapper {
-  margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  margin: var(--spacing-10) auto;
+  max-width: var(--maxWidth-wrapper) !important;
+  padding: var(--spacing-0) var(--spacing-5 );
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {

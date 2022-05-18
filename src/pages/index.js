@@ -18,13 +18,13 @@ const BlogIndex = ({ data, location }) => {
 
   const header = (link, name) => {
     return (
-      <h2 className="front-page-heading mb-4">
+      <div className="text-2xl font-semibold font-serif mt-8 mb-4">
         <Link to={`#${link}`}
           className={`pt-1 ${activeTag === link && "targetClass"}`}
           onClick={() => toggleActive(link)}>
           {name}
         </Link>
-      </h2>)
+      </div>)
   }
 
   const posts = (posts) => {
@@ -51,10 +51,10 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} className="font-serif">
       <header>
-        <div className="text-3xl font-extrabold font-serif mb-0">everyday: Development Log</div>
-        <a href={githubUrl} className="text-sm cursor-pointer">Github Repository</a>
+        <div className="text-4xl font-extrabold mt-10">everyday: Development Log</div>
+        <a href={githubUrl} className="text-sm text-gray-500 cursor-pointer mt-1">Github Repository</a>
       </header>
       <Seo title="" />
 
@@ -70,8 +70,8 @@ const BlogIndex = ({ data, location }) => {
         {tags.map(tag => {
           return (
             <li key={tag.name}>
-              <h2
-                className={`front-page-heading capitalize mt-8 mb-4`}
+              <div
+                className={`capitalize text-xl font-semibold mt-8 mb-4`}
                 id={tag.name}
               >
                 <Link
@@ -84,7 +84,7 @@ const BlogIndex = ({ data, location }) => {
                   {tag.name}
                   <span> ({tag.postCount})</span>
                 </Link>
-              </h2>
+              </div>
 
               {/* Posts */}
               <ul className="link-list">

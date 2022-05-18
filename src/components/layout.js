@@ -7,22 +7,24 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div data-is-root-path={isRootPath} className="flex flex-col">
-      <div className="flex-none flex flex-row items-center bg-stone-100 h-16 font-serif w-full" >
-        <div className="flex-1 wrapper">
-          <Link className="pl-5 text-lg font-bold font-serif" to="/">
+      <div className="flex-none self-center center-horizontal bg-stone-100 w-full h-16 font-serif">
+        <div className="global-header" >
+          <Link className="text-lg font-bold" to="/">
             {title}
-            <span className="text-stone-500 animation-blink">|</span>
+            <span className="text-stone-500 animation-blink">▮</span>
           </Link>
         </div>
+
+
       </div>
 
-      <main className="flex-none global-wrapper">{children}</main>
+      <div className="flex-none global-wrapper w-full">{children}</div>
 
       <div className="flex-1" />
 
       <footer className="flex-none flex flex-row justify-center items-center h-16 bg-stone-100 text-stone-500 text-sm font-serif">
         {/* Social */}
-        <div className="flex-1 wrapper center-horizontal px-5 w-full">
+        <div className="flex-1 center-horizontal w-full global-wrapper">
           <div >
             © {new Date().getFullYear()}
             {` `} An Le
