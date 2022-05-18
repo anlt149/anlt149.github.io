@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everyday development logs]]></title><description><![CDATA[Logging everything I've learnt.]]></description><link>https://github.com/anlt149/anlt149.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 18 May 2022 15:52:41 GMT</lastBuildDate><item><title><![CDATA[How to pass arguments to events in Svelte]]></title><description><![CDATA[Svelte events are the way we add interactivity to components in Svelte. But some time
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everyday development logs]]></title><description><![CDATA[Logging everything I've learnt.]]></description><link>https://github.com/anlt149/anlt149.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 18 May 2022 17:14:52 GMT</lastBuildDate><item><title><![CDATA[How I fixed gastby's footer  doesn't stay in place.]]></title><description><![CDATA[Recently I’d love to write down what I
+learn everyday. The purpose for this
+kind of activity is that I want to
+improve not only my English…]]></description><link>https://github.com/anlt149/anlt149.github.io/2022-05-18-how-i-fix-gatsby-footer/</link><guid isPermaLink="false">https://github.com/anlt149/anlt149.github.io/2022-05-18-how-i-fix-gatsby-footer/</guid><pubDate>Wed, 18 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Recently I’d love to write down what I
+learn everyday. The purpose for this
+kind of activity is that I want to
+improve not only my English but also my
+expression ability in writing. But sometimes the written lesson was too short and this is when the problem happens.
+The footer doesn’t stay at the bottom of my page.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5adb1a1c450456578b8e440fd7933df8/71e8d/footer.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 76.58227848101265%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAABJElEQVQ4y61T7W4CIRDk/R+vPxqbNDXa2nJ8HBwsCIfHNHensSZqrLrJsLCbzM7CwqJ3aJWEaH5gjYZWAko0MNZC2w5KCjT8G76ziMEj0hkEj0AOfU5gJSekSHCdnbx3HUyr4YnQUZj2WknEQMgpIm0vIaCUHsx5j4/lClJqbL75RPSIsRgj1usv6LYF5w2c81Oi1noX2LkqY+JeUjYuwzCcBP+S/bvle1u7qvCphHiysb7POKKffSlHTLFbMHMwpQSE4NOP8N7BBwJJgfD+Btp8wpOf49dABDICJDcHhfsKOSOPqpREWbyirJZ7lflExWX0V+5wtwOMAtJ2Pg/Dg2MzzmLaoi5eUFuJKjlqZ+b4za98GOSDjwGwLSD5rNSZ0/wZhb8GtJpNHxoe9AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;footer&quot;
+        title=&quot;footer&quot;
+        src=&quot;/static/5adb1a1c450456578b8e440fd7933df8/f058b/footer.png&quot;
+        srcset=&quot;/static/5adb1a1c450456578b8e440fd7933df8/c26ae/footer.png 158w,
+/static/5adb1a1c450456578b8e440fd7933df8/6bdcf/footer.png 315w,
+/static/5adb1a1c450456578b8e440fd7933df8/f058b/footer.png 630w,
+/static/5adb1a1c450456578b8e440fd7933df8/40601/footer.png 945w,
+/static/5adb1a1c450456578b8e440fd7933df8/78612/footer.png 1260w,
+/static/5adb1a1c450456578b8e440fd7933df8/71e8d/footer.png 1304w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;For example my layout file is look like this:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;flex flex-col min-h-[100vh]&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;header&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;flex-none&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;main&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;flex-1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;footer&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;flex-none&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As the knowledge page of a human, that thing should work. But Gatsby wraps other components with an unreachable &lt;code class=&quot;language-text&quot;&gt;&amp;lt;div&gt;&lt;/code&gt; with an empty class.
+Although I used tailwindCSS to specify &lt;code class=&quot;language-text&quot;&gt;flexbox&lt;/code&gt; for &lt;code class=&quot;language-text&quot;&gt;&amp;lt;div&gt;&lt;/code&gt;. So that I can’t access the wrapper of my components.&lt;/p&gt;
+&lt;p&gt;So I wrapped it within a known class element, such as:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;site-wrapper&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;header&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;flex-none&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;main&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;flex-1&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;footer&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;flex-none&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Add the following CSS for given &lt;code class=&quot;language-text&quot;&gt;site-wrapper&lt;/code&gt; class:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;// ./style.css
+.site-wrapper&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; flex&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;min-height&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 100vh&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; column&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Basically, the wrapper (site-wrapper) could expand until filling the viewport (100vh). Thus &lt;code class=&quot;language-text&quot;&gt;&amp;lt;main&gt;&lt;/code&gt; tag can grow free (&lt;code class=&quot;language-text&quot;&gt;flex-1&lt;/code&gt;)
+So, the footer will be always at the bottom of the page because it’s pushed by the rest of the flexbox column.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to pass arguments to events in Svelte]]></title><description><![CDATA[Svelte events are the way we add interactivity to components in Svelte. But some time
 we get a common issue with adding arguments to…]]></description><link>https://github.com/anlt149/anlt149.github.io/2022-05-16-how-svelte-pass-argument-in-function-call/</link><guid isPermaLink="false">https://github.com/anlt149/anlt149.github.io/2022-05-16-how-svelte-pass-argument-in-function-call/</guid><pubDate>Mon, 16 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Svelte events are the way we add interactivity to components in Svelte. But some time
 we get a common issue with adding &lt;strong&gt;arguments&lt;/strong&gt; to functions called within them.&lt;/p&gt;
 &lt;p&gt;For example, we have a basic counter increasing anytime user clicks on it.&lt;/p&gt;
