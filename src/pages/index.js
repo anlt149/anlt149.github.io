@@ -135,7 +135,7 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    recentPosts: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+    recentPosts: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC} limit: 5) {
       edges {
         node {
           frontmatter {
