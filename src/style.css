@@ -262,10 +262,6 @@ span > a {
   flex-direction: column;
 }
 
-.main {
-  flex-grow: 1;
-}
-
 .section-wrapper {
   margin: var(--spacing-14) auto;
   max-width: var(--maxWidth-wrapper) !important;

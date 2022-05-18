@@ -18,7 +18,7 @@ const Layout = ({ location, title, children }) => {
       </div>
 
       {/* Children */}
-      <main className="main flex-1 section-wrapper w-full">{children}</main>
+      <main className="flex-1 section-wrapper w-full">{children}</main>
 
       {/* Footer */}
       <footer className="flex-none flex flex-row justify-center items-center h-16 bg-stone-100 text-stone-500 text-sm font-serif">

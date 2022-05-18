@@ -74,7 +74,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit: 5) {
+    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit: 5, filter: {id: {ne: $id}}) {
       edges {
         node {
           id
