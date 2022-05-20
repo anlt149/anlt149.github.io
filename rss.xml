@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everyday development logs]]></title><description><![CDATA[Logging everything I've learnt.]]></description><link>https://github.com/anlt149/anlt149.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 18 May 2022 17:18:35 GMT</lastBuildDate><item><title><![CDATA[How I fixed gastby's footer  doesn't stay in place.]]></title><description><![CDATA[Recently I’d love to write down what I
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everyday development logs]]></title><description><![CDATA[Logging everything I've learnt.]]></description><link>https://github.com/anlt149/anlt149.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 20 May 2022 09:06:42 GMT</lastBuildDate><item><title><![CDATA[How I used Tailwind CSS in my project.]]></title><description><![CDATA[I am in love with using Tailwind CSS in my project, so when I came up to Gatsby, I must bring Tailwind CSS with me.
+There are quite simple…]]></description><link>https://github.com/anlt149/anlt149.github.io/2022-05-19-how-i-use-tailwind-in-my-gatsby-app/</link><guid isPermaLink="false">https://github.com/anlt149/anlt149.github.io/2022-05-19-how-i-use-tailwind-in-my-gatsby-app/</guid><pubDate>Thu, 19 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I am in love with using Tailwind CSS in my project, so when I came up to Gatsby, I must bring Tailwind CSS with me.
+There are quite simple steps to install and use it right away.&lt;/p&gt;
+&lt;h2&gt;1. Install dependencies&lt;/h2&gt;
+&lt;p&gt;First thing first, we need to install &lt;code class=&quot;language-text&quot;&gt;tailwindcss&lt;/code&gt; and its peer dependencies, as well as &lt;code class=&quot;language-text&quot;&gt;gatsby-plugin-postcss&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -D tailwindcss postcss autoprefixer gatsby-plugin-postcss&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If the installation is succeed, run the below command to generate both &lt;code class=&quot;language-text&quot;&gt;tailwind.config.js&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;postcss.config.js&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;npx tailwindcss init -p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The project’s struture will be:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;project
+|-- content
+|    |-- blogs
+|-- public
+|-- src
+|-- ...
+|
+|-- tailwind.config.js
+|-- postcss.config.js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;2. Enable plugins and configure the project&lt;/h2&gt;
+&lt;p&gt;Next, I enable the Gatsby PostCss plugin in &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt;
+More information at &lt;a href=&quot;https://www.gatsbyjs.com/plugins/gatsby-plugin-postcss/&quot;&gt;&lt;strong&gt;https://www.gatsbyjs.com/plugins/gatsby-plugin-postcss/&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;gatsby-plugin-postcss&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now configure template paths in order to enable which file extension could use Tailwind CSS classes.
+Add the paths to all of your template files in &lt;code class=&quot;language-text&quot;&gt;tailwind.config.js&lt;/code&gt; file.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;./src/**/*.{js,jsx,ts,tsx}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;theme&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create a css file in styles directory &lt;code class=&quot;language-text&quot;&gt;./src/styles/Global.css&lt;/code&gt; and add the following lines&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@tailwind&lt;/span&gt; base&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@tailwind&lt;/span&gt; components&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@tailwind&lt;/span&gt; utilities&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In &lt;code class=&quot;language-text&quot;&gt;gatsby-browser.js&lt;/code&gt; import the css file path.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./src/styles/global.css&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Run the following command to start the build process&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;gatsby develop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Start using Tailwind’s utility classes to style UI.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;Layout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text-3xl font-bold underline&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+    Hello world!
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;Layout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Resource&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://tailwindcss.com/docs/guides/gatsby&quot;&gt;https://tailwindcss.com/docs/guides/gatsby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How I fixed gastby's footer  doesn't stay in place.]]></title><description><![CDATA[Recently I’d love to write down what I
 learn everyday. The purpose for this
 kind of activity is that I want to
 improve not only my English…]]></description><link>https://github.com/anlt149/anlt149.github.io/2022-05-18-how-i-fix-gatsby-footer/</link><guid isPermaLink="false">https://github.com/anlt149/anlt149.github.io/2022-05-18-how-i-fix-gatsby-footer/</guid><pubDate>Wed, 18 May 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Recently I’d love to write down what I
