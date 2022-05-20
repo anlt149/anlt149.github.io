@@ -336,6 +336,11 @@ span > a {
 }
 
 /* Custom classes */
+p > .language-text {
+  font-size: 0.825rem !important;
+  color: red;
+}
+
 .front-page-heading {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   margin-bottom: var(--spacing-6) !important;
