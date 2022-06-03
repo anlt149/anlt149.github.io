@@ -1,7 +1,7 @@
 ---
-title: How I published my gatsby app to github pages
+title: Customize checkbox
 date: "2022-06-03"
-description: "Publish gatsby web application to github pages."
+description: ""
 tags: ["svelte"]
 ---
 
